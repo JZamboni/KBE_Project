@@ -33,6 +33,9 @@ class ImporterEx:
     else:
         print ("File type is not supported in this application. Please choose a different format")
 
+
+    ###### Fuselage ######
+
     fuselageLength = ExcelImporter.fuselageLength(importer)
     fuselageRadius = ExcelImporter.fuselageRadius(importer)
     fuselageRadius2 = ExcelImporter.fuselageRadius2(importer)

@@ -11,13 +11,13 @@ class ExcelImporter:
     wb = Workbook()
 
     def fuselageLength(self):
-        importValue = self.sheet['D5'].value
+        importValue = float(self.sheet['D5'].value)
         return importValue
 
     def fuselageRadius(self):
-        importValue = self.sheet['D6'].value
+        importValue = float(self.sheet['D6'].value)
         return importValue
 
     def fuselageRadius2(self):
-        importValue = self.sheet['D7'].value
+        importValue = float(self.sheet['D7'].value)
         return importValue

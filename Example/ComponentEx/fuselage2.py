@@ -12,6 +12,10 @@ class FuselageEx2(Base):
     def radiusEx(self):
         return ImporterEx.fuselageRadius2
 
+    @Input
+    def Mach(self):
+        return 0.7
+
     @Part
     def cylinderEx(self):
         return Cylinder(radius = self.radiusEx, height = self.fuselageLengthEx)
