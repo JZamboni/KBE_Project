@@ -3,7 +3,7 @@ from Tkinter import *
 from tkFileDialog import askopenfilename
 from Importers.excelImporter import ExcelImporter
 
-class inputHandler:
+class ImporterEx:
 
     '''
     Handler that takes care of opening different format files.
@@ -29,8 +29,12 @@ class inputHandler:
     Button(text='File Open', command=callback).pack(fill=X)
 
     if file_extension == ".xlsx":
-        spam = ExcelImporter(filePath=filePath)
-        data = ExcelImporter.readData(spam)
-        print data
+        importer = ExcelImporter(filePath = filePath)
     else:
         print ("File type is not supported in this application. Please choose a different format")
+
+    fuselageLength = ExcelImporter.fuselageLength(importer)
+    fuselageRadius = ExcelImporter.fuselageRadius(importer)
+    fuselageRadius2 = ExcelImporter.fuselageRadius2(importer)
+
+    print fuselageLength

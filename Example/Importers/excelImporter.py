@@ -4,17 +4,20 @@ from openpyxl import load_workbook
 class ExcelImporter:
 
     def __init__(self, filePath):
-        self.filePath=filePath
-        self.excelFile = load_workbook(filePath)
+        self.filePath= filePath
+        self.excelFile = load_workbook(self.filePath)
         self.sheet=self.excelFile['Sheet1']
 
+    wb = Workbook()
 
-
-    def readData(self):
-
-        wb = Workbook()
+    def fuselageLength(self):
         importValue = self.sheet['D5'].value
-        myFuselageLength=fuselageLength.fuselageLength()
-        fuselageLength.fuselageLength.setValue(myFuselageLength, value=importValue)
+        return importValue
 
-        return fuselageLength.fuselageLength.getValue(myFuselageLength)
+    def fuselageRadius(self):
+        importValue = self.sheet['D6'].value
+        return importValue
+
+    def fuselageRadius2(self):
+        importValue = self.sheet['D7'].value
+        return importValue

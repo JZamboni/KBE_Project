@@ -2,15 +2,15 @@ from parapy.core import *
 from parapy.geom import *
 from Example.importerEx import ImporterEx
 
-class FuselageEx(Base):
+class FuselageEx2(Base):
 
     @Input
     def fuselageLengthEx(self):
-        return ImporterEx.fuselageLength
+        return ImporterEx.fuselageLength+5
 
     @Input
     def radiusEx(self):
-        return ImporterEx.fuselageRadius
+        return ImporterEx.fuselageRadius2
 
     @Part
     def cylinderEx(self):
