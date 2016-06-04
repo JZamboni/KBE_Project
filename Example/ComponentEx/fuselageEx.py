@@ -22,9 +22,14 @@ class FuselageEx(Base):
 
     ### Input passati da Airplane che non devono essere cambiati qui ###
 
-    @Input(settable=False)
+    if __name__ == '__main__':
+        settable = True
+    else:
+        settable = False
+
+    @Input(settable=settable)
     def MachImportato(self):
-        return 0.6
+        return 0.5
 
 if __name__ == '__main__':
     from parapy.gui import display
