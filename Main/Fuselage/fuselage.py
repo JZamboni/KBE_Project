@@ -29,6 +29,14 @@ class Fuselage(GeomBase):
         """
         return 4.
 
+    @Input
+    def noseSlenderness(self):
+        """
+        Aircraft Diameter
+        :Unit: [m]
+        :rtype: float
+        """
+        return 4.
 
 
 if __name__ == '__main__':
